@@ -1,0 +1,15 @@
+[Unit]
+Description=Telegram bot 'SRSM BOT'
+After=syslog.target
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/home/administrator/srsm_bot/studcity
+ExecStart=/usr/bin/python3 /home/administrator/srsm_bot/studcity/StudCity.py
+RestartSec=5
+Restart=always
+ 
+[Install]
+WantedBy=multi-user.target
